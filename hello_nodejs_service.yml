@@ -5,8 +5,11 @@ metadata:
 spec:
   type: NodePort
   ports:
-  - port: 8080
-    targetPort: 8080
-    protocol: TCP
+    - port: 80
+      nodePort: 30010
+      name: mainport
+      targetPort: 80
+      protocol: TCP
+
   selector:
     app: hello-nodejs
